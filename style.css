@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+
+label {
+    display: block;
+    margin: 10px 0px;
+}
+
+button {
+    margin: 10px 0px;
+    padding: 5px 10px;
+}
+
+.row {
+    display:flex;
+    gap:20px;
+    
+}
