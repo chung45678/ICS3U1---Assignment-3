@@ -13,16 +13,13 @@ document.getElementById("calculateCosine").addEventListener("click", () => {
 });
 
 function findAsymptote(m,n) {
-    if (m === n) {
-        return "The asymptote is horizontal";
-    } else if (n > m) {
-        return "The asymptote is the x-axis";
-    } else {
-        const degreeDifference = m - n;
-        const names = ["Linear", "Quadratic", "Cubic", "Quartic","Quintic", "Sextic", "Septic", "Octic", "Nonic", "Decic"];
-        return names[degreeDifference - 1] ? names[degreeDifference - 1] : "Higher-degree asymptote";
+    if (m === n) return "The asymptote is horizontal";
+    if (n > m) return "The asymptote is the x-axis";
     
-    }
+    const degreeDifference = m - n;
+    const names = ["Linear", "Quadratic", "Cubic", "Quartic","Quintic", "Sextic", "Septic", "Octic", "Nonic", "Decic"];
+    return names[degreeDifference - 1] || "Higher-degree asymptote";
+
 }
 
 document.getElementById("asymptote").addEventListener("click", () => {
@@ -32,6 +29,18 @@ document.getElementById("asymptote").addEventListener("click", () => {
     document.getElementById("asymptoteResult").textContent = result;
 });
 
+function findLeibniz(n) {
+    let a = 0
+    for (let i = 0; i < n; i++) {
+        a += ((i % 2 === 0 ? 1: -1) / (2 *i + 1));
+    }
+    return (a * 4)
+}
 
+document.getElementById("approximatePi").addEventListener("click", () => {
+    const n = parseInt(document.getElementById("iterations").value);
+    const result = findLeibniz(n);
+    document.getElementById("piResult").textContent = result
+})
 
 
