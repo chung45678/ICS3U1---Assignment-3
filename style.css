@@ -1,15 +1,21 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    
-    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
 
 }
 
 section {
+    text-align:center;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
     padding: 10px;
     background-color: rgb(255, 255, 255);
+    border-radius: 8px;
     padding: 20px;
     max-width: 400px;
     
@@ -17,12 +23,13 @@ section {
 }
 
 label {
+    text-align: center;
     display: block;
     margin: 10px 0px;
 }
 
 button {
-    background-color: rgb(2, 63, 63);
+    background-color: rgb(10, 126, 204);
     color: white;
     border: none;
     padding: 8px 16px;
@@ -43,4 +50,11 @@ label {
     font-weight: 600;
     color: black;
     text-align: left;
+}
+
+.container {
+    display:flex;
+    gap: 30px;
+    width: 800px;
+    flex-wrap: wrap;
 }
